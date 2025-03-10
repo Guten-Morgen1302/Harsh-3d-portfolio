@@ -4,65 +4,73 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
+    /* Space/Universe Dark Theme */
+    --background: 240 30% 5%; /* Deep space black with a hint of blue */
     --foreground: 0 0% 94%;
     
-    --card: 222 47% 11%;
+    --card: 240 30% 10%;
     --card-foreground: 0 0% 94%;
     
-    --popover: 222 47% 11%;
+    --popover: 240 30% 10%;
     --popover-foreground: 0 0% 94%;
     
-    --primary: 259 64% 41%;
+    --primary: 259 85% 50%; /* Purple/violet for cosmic feel */
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 187 100% 50%;
+    --secondary: 187 100% 60%; /* Bright cyan for stars/nebulae */
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 220 13% 18%;
-    --muted-foreground: 0 0% 64%;
+    --muted: 240 30% 15%;
+    --muted-foreground: 217 10% 70%;
     
-    --accent: 187 100% 50%;
+    --accent: 187 100% 60%; /* Same as secondary */
     --accent-foreground: 0 0% 100%;
     
-    --destructive: 0 62% 30%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 220 13% 25%;
-    --input: 220 13% 18%;
-    --ring: 259 64% 41%;
+    --border: 240 30% 20%;
+    --input: 240 30% 15%;
+    --ring: 259 85% 50%;
     
     --radius: 0.5rem;
+
+    --neutral: 217 10% 70%;
+    --neutral-dark: 240 30% 10%;
   }
 
   .light-mode {
-    --background: 0 0% 96%;
-    --foreground: 222 47% 11%;
+    /* Space Light Theme */
+    --background: 220 20% 90%; /* Light blue-gray like daylight sky */
+    --foreground: 240 30% 10%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 220 20% 97%;
+    --card-foreground: 240 30% 10%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 220 20% 97%;
+    --popover-foreground: 240 30% 10%;
     
-    --primary: 259 64% 41%;
+    --primary: 259 75% 45%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 187 100% 50%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 187 90% 45%;
+    --secondary-foreground: 240 30% 10%;
     
-    --muted: 220 13% 92%;
-    --muted-foreground: 220 13% 40%;
+    --muted: 220 20% 80%;
+    --muted-foreground: 240 10% 40%;
     
-    --accent: 259 64% 41%;
+    --accent: 259 75% 45%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 220 13% 86%;
-    --input: 220 13% 92%;
-    --ring: 259 64% 41%;
+    --border: 220 20% 75%;
+    --input: 220 20% 80%;
+    --ring: 259 75% 45%;
+
+    --neutral: 240 10% 40%;
+    --neutral-dark: 220 20% 80%;
   }
 }
 
@@ -127,5 +135,59 @@
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
+  }
+  
+  /* 3D perspective for futuristic UI */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  /* Space theme elements */
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+  }
+  
+  @keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.7); }
+  }
+  
+  /* Glowing text effect */
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  /* Cosmic gradient backgrounds */
+  .bg-cosmic {
+    background: linear-gradient(to bottom, #070b34, #1a1342, #311b5e);
+  }
+  
+  .bg-nebula {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  }
+  
+  /* Space dust particles */
+  .space-dust {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* 3D text effect */
+  .text-3d {
+    text-shadow: 
+      0px 1px 0px rgba(255, 255, 255, 0.2),
+      0px 2px 0px rgba(255, 255, 255, 0.2),
+      0px 3px 0px rgba(255, 255, 255, 0.1),
+      0px 4px 0px rgba(0, 0, 0, 0.5),
+      0px 5px 10px rgba(0, 0, 0, 0.7);
   }
 }

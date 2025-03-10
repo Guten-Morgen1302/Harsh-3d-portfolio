@@ -15,10 +15,62 @@ import { motion } from "framer-motion";
 
 function Preloader() {
   return (
-    <div className="fixed inset-0 bg-primary z-50 flex items-center justify-center">
-      <div className="text-accent animate-pulse">
-        <div className="text-4xl font-orbitron">HARSH PATIL</div>
-        <div className="text-xl text-center mt-2">UI/UX Designer & Developer</div>
+    <div className="fixed inset-0 bg-black z-50 flex items-center justify-center overflow-hidden">
+      <div className="relative perspective-1000">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, scale: 0.5, rotateX: -45 }}
+          animate={{ 
+            opacity: 1, 
+            scale: 1, 
+            rotateX: 0,
+            z: [0, 50, 0],
+          }}
+          transition={{ 
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
+        >
+          <div className="text-6xl font-orbitron font-bold tracking-wider mb-4
+                        bg-clip-text text-transparent bg-gradient-to-r 
+                        from-blue-500 via-purple-500 to-green-500
+                        filter drop-shadow-[0_0_10px_rgba(79,70,229,0.8)]">
+            LOADING
+          </div>
+          <motion.div 
+            className="text-xl text-cyan-300 tracking-wide font-light"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            Entering Universe
+          </motion.div>
+        </motion.div>
+      </div>
+      
+      {/* Stars background effect */}
+      <div className="absolute inset-0 overflow-hidden">
+        {Array.from({ length: 50 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: 2 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
       </div>
     </div>
   );
