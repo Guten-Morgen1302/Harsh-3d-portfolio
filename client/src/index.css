@@ -142,24 +142,59 @@
     perspective: 1000px;
   }
   
-  /* Space theme elements */
+  /* Enhanced space theme elements */
   .star {
     position: absolute;
     width: 2px;
     height: 2px;
     background-color: white;
     border-radius: 50%;
-    animation: twinkle 2s infinite alternate;
+    animation: twinkle 3s infinite alternate;
+  }
+  
+  .medium-star {
+    animation: twinkle-medium 5s infinite alternate;
+  }
+  
+  .large-star {
+    position: absolute;
+    border-radius: 50%;
+    animation: pulse 8s infinite alternate;
+  }
+  
+  .cosmic-dust {
+    position: absolute;
+    border-radius: 50%;
+    animation: drift 60s infinite linear;
   }
   
   @keyframes twinkle {
-    0% { opacity: 0.3; }
-    100% { opacity: 1; box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.7); }
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; transform: scale(1.2); }
   }
   
-  /* Glowing text effect */
+  @keyframes twinkle-medium {
+    0% { opacity: 0.4; transform: scale(1); }
+    40% { opacity: 0.8; transform: scale(1.1); }
+    60% { opacity: 1; transform: scale(1.3); }
+    100% { opacity: 0.6; transform: scale(1); }
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+    100% { opacity: 0.7; transform: scale(1); }
+  }
+  
+  @keyframes drift {
+    0% { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
+  }
+  
+  /* Enhanced glowing text effect */
   .text-glow {
-    text-shadow: 0 0 10px currentColor;
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px rgba(255, 255, 255, 0.3);
   }
   
   /* Cosmic gradient backgrounds */
@@ -171,6 +206,10 @@
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   }
   
+  .bg-deep-space {
+    background: radial-gradient(ellipse at bottom, #3a1b7a 0%, #261155 50%, #1c0d41 100%);
+  }
+  
   /* Space dust particles */
   .space-dust {
     position: absolute;
@@ -179,6 +218,17 @@
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Cosmic accent elements */
+  .cosmic-accent {
+    box-shadow: 0 0 15px #00e5ff, 0 0 30px rgba(0, 229, 255, 0.5);
+    animation: cosmic-pulse 4s infinite alternate;
+  }
+  
+  @keyframes cosmic-pulse {
+    0% { box-shadow: 0 0 15px #00e5ff, 0 0 30px rgba(0, 229, 255, 0.3); }
+    100% { box-shadow: 0 0 20px #00e5ff, 0 0 40px rgba(0, 229, 255, 0.6); }
   }
   
   /* 3D text effect */

@@ -37,16 +37,25 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
       document.body.classList.remove("light-mode");
-      document.documentElement.style.setProperty("--background", "240 30% 5%"); // Space dark
-      document.documentElement.style.setProperty("--primary", "259 85% 50%"); // Purple cosmic
-      document.documentElement.style.setProperty("--secondary", "187 100% 60%"); // Bright cyan
+      document.documentElement.style.setProperty("--background", "260 75% 25%"); // Deep purple space
+      document.documentElement.style.setProperty("--primary", "260 75% 45%"); // Vibrant purple
+      document.documentElement.style.setProperty("--secondary", "180 100% 50%"); // Bright cyan
+      document.documentElement.style.setProperty("--cosmic", "260 75% 25%"); // Deep space purple
+      document.documentElement.style.setProperty("--cosmic-accent", "180 100% 60%"); // Bright glow
     } else {
       document.documentElement.classList.remove("dark");
       document.body.classList.add("light-mode");
-      document.documentElement.style.setProperty("--background", "220 20% 90%"); // Light blue-gray
-      document.documentElement.style.setProperty("--primary", "259 75% 45%"); // Lighter purple
-      document.documentElement.style.setProperty("--secondary", "187 90% 45%"); // Lighter cyan
+      document.documentElement.style.setProperty("--background", "260 60% 30%"); // Lighter purple
+      document.documentElement.style.setProperty("--primary", "260 60% 40%"); // Medium purple
+      document.documentElement.style.setProperty("--secondary", "180 90% 45%"); // Lighter cyan
+      document.documentElement.style.setProperty("--cosmic", "260 60% 30%"); // Lighter space purple
+      document.documentElement.style.setProperty("--cosmic-accent", "180 90% 55%"); // Lighter glow
     }
+    
+    // Setting the default to always be space-themed regardless of mode
+    document.documentElement.style.setProperty("--background", "260 75% 25%"); // Deep purple space
+    document.documentElement.style.setProperty("--cosmic", "260 75% 25%"); // Deep space purple
+    
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
 

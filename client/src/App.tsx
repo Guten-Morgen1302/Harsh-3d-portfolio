@@ -79,6 +79,7 @@ function Preloader() {
 function StarBackground() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* Small twinkling stars */}
       {Array.from({ length: 150 }).map((_, i) => (
         <div
           key={i}
@@ -89,6 +90,58 @@ function StarBackground() {
             width: `${Math.random() * 2 + 1}px`,
             height: `${Math.random() * 2 + 1}px`,
             animationDelay: `${Math.random() * 5}s`,
+            boxShadow: `0 0 ${Math.random() * 10}px rgba(255, 255, 255, 0.8)`,
+          }}
+        />
+      ))}
+      
+      {/* Medium stars with stronger glow */}
+      {Array.from({ length: 30 }).map((_, i) => (
+        <div
+          key={`medium-${i}`}
+          className="star medium-star"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            width: `${Math.random() * 2 + 2}px`,
+            height: `${Math.random() * 2 + 2}px`,
+            animationDelay: `${Math.random() * 7}s`,
+            boxShadow: `0 0 ${Math.random() * 15}px rgba(255, 255, 255, 0.9)`,
+          }}
+        />
+      ))}
+      
+      {/* Larger celestial bodies */}
+      {Array.from({ length: 5 }).map((_, i) => (
+        <div
+          key={`large-${i}`}
+          className="large-star"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            width: `${Math.random() * 4 + 3}px`,
+            height: `${Math.random() * 4 + 3}px`,
+            background: i % 2 === 0 ? 'rgba(135, 206, 250, 0.9)' : 'rgba(255, 223, 186, 0.9)',
+            boxShadow: i % 2 === 0 
+              ? `0 0 20px rgba(135, 206, 250, 0.9), 0 0 40px rgba(135, 206, 250, 0.5)` 
+              : `0 0 20px rgba(255, 223, 186, 0.9), 0 0 40px rgba(255, 223, 186, 0.5)`,
+          }}
+        />
+      ))}
+      
+      {/* Cosmic dust */}
+      {Array.from({ length: 40 }).map((_, i) => (
+        <div
+          key={`dust-${i}`}
+          className="cosmic-dust"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            width: `${Math.random() * 30 + 20}px`,
+            height: `${Math.random() * 30 + 20}px`,
+            opacity: Math.random() * 0.1,
+            background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%)',
+            filter: 'blur(3px)',
           }}
         />
       ))}
@@ -98,7 +151,14 @@ function StarBackground() {
 
 function Home() {
   return (
-    <div className="bg-cosmic text-foreground relative min-h-screen">
+    <div className="bg-[#3a1b7a] text-white relative min-h-screen overflow-hidden">
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{ 
+          background: "radial-gradient(circle at 50% 50%, #4922a3 0%, #3a1b7a 50%, #2a125c 100%)",
+          opacity: 0.9
+        }}
+      />
       <StarBackground />
       <div className="relative z-10">
         <Navbar />
@@ -120,10 +180,10 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time for assets
+    // Simulate loading time for assets (increased to 5 seconds as requested)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);

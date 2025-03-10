@@ -322,9 +322,9 @@ export default function Hero() {
             </motion.div>
           </motion.div>
           
-          {/* Enhanced 3D Object Canvas with better entrance animation */}
+          {/* Profile Picture with cosmic effects */}
           <motion.div 
-            className="w-full md:w-1/2 h-[400px]"
+            className="w-full md:w-1/2 h-[400px] flex items-center justify-center"
             initial={{ 
               opacity: 0, 
               scale: 0.8,
@@ -342,7 +342,92 @@ export default function Hero() {
               delay: 0.7
             }}
           >
-            <HeroObject mousePosition={mousePosition} />
+            <div className="relative">
+              {/* Glowing orbit effect */}
+              <motion.div 
+                className="absolute inset-0 bg-transparent rounded-full"
+                style={{ 
+                  border: '2px solid rgba(135, 206, 250, 0.4)',
+                  boxShadow: '0 0 40px 5px rgba(135, 206, 250, 0.2)',
+                }}
+                animate={{
+                  rotate: 360,
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              />
+              
+              {/* Second orbit */}
+              <motion.div 
+                className="absolute inset-0 bg-transparent rounded-full"
+                style={{ 
+                  border: '1px solid rgba(180, 255, 255, 0.3)',
+                  transform: 'scale(1.2) rotate(45deg)',
+                  boxShadow: '0 0 20px 2px rgba(180, 255, 255, 0.1)',
+                }}
+                animate={{
+                  rotate: [45, 405],
+                }}
+                transition={{
+                  duration: 30,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              />
+              
+              {/* Profile image with glow */}
+              <motion.div
+                className="relative z-10 w-[250px] h-[250px] rounded-full overflow-hidden"
+                style={{
+                  boxShadow: '0 0 30px 5px rgba(70, 130, 240, 0.5)',
+                }}
+                animate={{
+                  boxShadow: ['0 0 30px 5px rgba(70, 130, 240, 0.5)', '0 0 40px 10px rgba(70, 130, 240, 0.7)', '0 0 30px 5px rgba(70, 130, 240, 0.5)']
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <img 
+                  src="/harsh-patil.png" 
+                  alt="Harsh Patil" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              
+              {/* Floating particles around the image */}
+              {Array.from({ length: 8 }).map((_, i) => (
+                <motion.div
+                  key={`particle-${i}`}
+                  className="absolute w-2 h-2 rounded-full bg-cyan-400"
+                  style={{
+                    boxShadow: '0 0 10px 2px rgba(6, 182, 212, 0.7)'
+                  }}
+                  initial={{
+                    x: 0,
+                    y: 0,
+                    opacity: 0,
+                  }}
+                  animate={{
+                    x: [0, (Math.random() - 0.5) * 150],
+                    y: [0, (Math.random() - 0.5) * 150],
+                    opacity: [0, 1, 0],
+                    scale: [0, 1, 0]
+                  }}
+                  transition={{
+                    duration: 5 + Math.random() * 5,
+                    repeat: Infinity,
+                    delay: i * 0.6,
+                    ease: "easeInOut"
+                  }}
+                />
+              ))}
+            </div>
           </motion.div>
         </div>
         
