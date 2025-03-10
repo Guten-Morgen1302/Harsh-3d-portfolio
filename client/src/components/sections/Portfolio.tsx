@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { projects } from "@/lib/data";
+import { projects, allProjectsUrl } from "@/lib/data";
 
 export default function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -54,7 +54,7 @@ export default function Portfolio() {
             className="font-inter text-neutral/80 text-center max-w-2xl mx-auto mb-12"
             variants={headingVariant}
           >
-            Explore a selection of my most innovative and visually striking projects. Each one represents a unique challenge solved through creativity and technical expertise.
+            Explore a selection of my most innovative projects. Each one represents a unique challenge solved through creativity and technical expertise.
           </motion.p>
           
           {/* Projects Grid */}
@@ -98,13 +98,26 @@ export default function Portfolio() {
                     ))}
                   </div>
                   
-                  <motion.a
-                    href={project.link}
-                    className="text-accent text-sm font-medium flex items-center"
-                    whileHover={{ x: 5 }}
-                  >
-                    View Project <i className="fas fa-arrow-right ml-2"></i>
-                  </motion.a>
+                  <div className="flex gap-4">
+                    <motion.a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent text-sm font-medium flex items-center"
+                      whileHover={{ x: 5 }}
+                    >
+                      Live Demo <i className="fas fa-external-link-alt ml-2"></i>
+                    </motion.a>
+                    <motion.a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-sm font-medium flex items-center"
+                      whileHover={{ x: 5 }}
+                    >
+                      GitHub <i className="fab fa-github ml-2"></i>
+                    </motion.a>
+                  </div>
                 </motion.div>
               </motion.div>
             ))}
@@ -116,12 +129,14 @@ export default function Portfolio() {
             variants={headingVariant}
           >
             <motion.a
-              href="#"
+              href={allProjectsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-secondary/20 hover:bg-secondary/30 text-accent hover:text-white border border-accent hover:border-transparent font-medium py-3 px-8 rounded-full transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View All Projects <i className="fas fa-grid-2 ml-2"></i>
+              View All Projects <i className="fas fa-external-link-alt ml-2"></i>
             </motion.a>
           </motion.div>
         </motion.div>

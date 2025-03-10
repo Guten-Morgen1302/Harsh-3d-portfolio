@@ -244,8 +244,8 @@ export default function Hero() {
               className="font-inter text-lg md:text-xl text-neutral/80 mb-8 max-w-lg"
               variants={fadeInUp}
             >
-              I'm a passionate Web Developer and Designer based in Mumbai, India. 
-              I create user-friendly and visually stunning websites that deliver exceptional user experiences.
+              Hello, I'm Harsh Patil. I'm a passionate Web Developer & UI/UX Designer focusing on 
+              creating intuitive and visually appealing interfaces with smooth user experiences.
             </motion.p>
             
             <motion.div 

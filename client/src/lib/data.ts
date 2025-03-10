@@ -1,153 +1,165 @@
 // Project data
 export const projects = [
   {
-    title: "AR Visualization App",
-    description: "An augmented reality application that transforms architectural blueprints into interactive 3D models.",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&h=400",
-    technologies: ["Three.js", "WebXR", "React"],
-    link: "#"
+    title: "Weather App",
+    description: "Real-time weather application with forecast capabilities and location search",
+    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=600&h=400",
+    technologies: ["React", "Weather API", "JavaScript"],
+    liveLink: "https://weather-app-25.vercel.app/",
+    githubLink: "https://github.com/Guten-Morgen1302/weather-app"
   },
   {
-    title: "Interactive Music Experience",
-    description: "A 3D audio visualization platform that transforms music into stunning visual experiences.",
-    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&h=400",
-    technologies: ["WebGL", "Web Audio API", "GSAP"],
-    link: "#"
+    title: "E-commerce Platform",
+    description: "E-commerce platform with integrated payment processing and inventory management",
+    image: "https://images.unsplash.com/photo-1556741533-411cf82e4e2d?auto=format&fit=crop&w=600&h=400",
+    technologies: ["React", "Node.js", "MongoDB"],
+    liveLink: "https://shop-easily.vercel.app/",
+    githubLink: "https://github.com/Guten-Morgen1302/E-commerce-Platform"
   },
   {
-    title: "E-commerce 3D Configurator",
-    description: "Custom product configurator allowing users to customize products in real-time 3D visualization.",
-    image: "https://images.unsplash.com/photo-1616091093714-c64882e9ab55?auto=format&fit=crop&w=600&h=400",
-    technologies: ["Three.js", "Next.js", "Shopify"],
-    link: "#"
+    title: "Task Management System",
+    description: "Task management system with real-time updates and team collaboration features",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&h=400",
+    technologies: ["React", "Firebase", "Tailwind CSS"],
+    liveLink: "https://task-tracking-platform.vercel.app/",
+    githubLink: "https://github.com/Guten-Morgen1302/Task-Management-System"
   },
   {
-    title: "Virtual Reality Gallery",
-    description: "An immersive VR art gallery showcasing digital artwork in a custom-designed virtual space.",
-    image: "https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&w=600&h=400",
-    technologies: ["A-Frame", "WebVR", "Blender"],
-    link: "#"
+    title: "Social Media Dashboard",
+    description: "Social media dashboard with analytics and content scheduling capabilities",
+    image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=600&h=400",
+    technologies: ["React", "Node.js", "Chart.js"],
+    liveLink: "https://social-sync-dashboard.vercel.app/",
+    githubLink: "https://github.com/Guten-Morgen1302/Social-Media-Dashboard"
   },
   {
-    title: "Interactive Data Visualization",
-    description: "3D data visualization dashboard that makes complex information intuitive and engaging.",
-    image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?auto=format&fit=crop&w=600&h=400",
-    technologies: ["D3.js", "Three.js", "Vue.js"],
-    link: "#"
+    title: "Fitness Tracking App",
+    description: "Fitness tracking application with personalized workout plans and progress metrics",
+    image: "https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=600&h=400",
+    technologies: ["React", "MongoDB", "Express"],
+    liveLink: "https://fitness-hub-pro.vercel.app/",
+    githubLink: "https://github.com/Guten-Morgen1302/FitnessHub"
   },
   {
-    title: "Interactive Game World",
-    description: "A browser-based 3D game world with physics and interactive elements created with WebGL.",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&h=400",
-    technologies: ["Three.js", "Cannon.js", "JavaScript"],
-    link: "#"
+    title: "Recipe Sharing Platform",
+    description: "Recipe sharing platform with ingredient search and meal planning features",
+    image: "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=600&h=400",
+    technologies: ["React", "Node.js", "MongoDB"],
+    liveLink: "https://cook-with-us.vercel.app/",
+    githubLink: "https://github.com/Guten-Morgen1302/Recipe-Sharing-Platform"
   }
 ];
 
 // Skills data
 export const skills = [
   {
+    name: "HTML",
+    icon: "fab fa-html5",
+    color: "text-orange-500",
+    level: "Advanced proficiency"
+  },
+  {
+    name: "CSS",
+    icon: "fab fa-css3-alt",
+    color: "text-blue-500",
+    level: "Advanced proficiency"
+  },
+  {
     name: "JavaScript",
     icon: "fab fa-js",
     color: "text-yellow-400",
-    level: "Expert (5+ years)"
+    level: "Advanced proficiency"
   },
   {
     name: "React",
     icon: "fab fa-react",
     color: "text-blue-400",
-    level: "Advanced (4 years)"
+    level: "Advanced proficiency"
   },
   {
     name: "Node.js",
     icon: "fab fa-node-js",
     color: "text-green-500",
-    level: "Intermediate (3 years)"
+    level: "Advanced proficiency"
   },
   {
-    name: "Three.js",
-    icon: "fas fa-cube",
-    color: "text-purple-400",
-    level: "Expert (4 years)"
+    name: "GitHub",
+    icon: "fab fa-github",
+    color: "text-gray-700",
+    level: "Advanced proficiency"
   },
   {
-    name: "WebXR",
-    icon: "fas fa-vr-cardboard",
-    color: "text-red-400",
-    level: "Advanced (3 years)"
+    name: "Tailwind CSS",
+    icon: "fab fa-css3",
+    color: "text-cyan-400",
+    level: "Advanced proficiency"
   },
   {
-    name: "Unity",
-    icon: "fab fa-unity",
-    color: "text-gray-400",
-    level: "Intermediate (2 years)"
+    name: "MongoDB",
+    icon: "fas fa-database",
+    color: "text-green-600",
+    level: "Advanced proficiency"
   },
   {
-    name: "Blender",
-    icon: "fas fa-paint-brush",
-    color: "text-orange-400",
-    level: "Advanced (3 years)"
+    name: "Express",
+    icon: "fab fa-node",
+    color: "text-gray-500",
+    level: "Advanced proficiency"
   },
   {
-    name: "Vue.js",
-    icon: "fab fa-vuejs",
-    color: "text-green-400",
-    level: "Intermediate (2 years)"
+    name: "Git",
+    icon: "fab fa-git-alt",
+    color: "text-red-500",
+    level: "Advanced proficiency"
+  },
+  {
+    name: "Figma",
+    icon: "fab fa-figma",
+    color: "text-purple-500",
+    level: "Advanced proficiency"
+  },
+  {
+    name: "TypeScript",
+    icon: "fab fa-js",
+    color: "text-blue-600",
+    level: "Advanced proficiency"
   }
 ];
 
 // Skill categories with proficiency levels
 export const skillCategories = [
   {
-    name: "Development",
-    icon: "fas fa-code",
+    name: "Frontend",
+    icon: "fas fa-laptop-code",
     items: [
-      { name: "JavaScript/TypeScript", proficiency: 95 },
-      { name: "React/Next.js", proficiency: 90 },
-      { name: "Node.js", proficiency: 85 },
-      { name: "Vue.js", proficiency: 75 }
+      { name: "HTML", proficiency: 95 },
+      { name: "CSS", proficiency: 95 },
+      { name: "JavaScript", proficiency: 95 },
+      { name: "React", proficiency: 95 },
+      { name: "Tailwind CSS", proficiency: 95 }
     ]
   },
   {
-    name: "3D & Graphics",
-    icon: "fas fa-cube",
+    name: "Backend",
+    icon: "fas fa-server",
     items: [
-      { name: "Three.js/WebGL", proficiency: 90 },
-      { name: "Blender", proficiency: 80 },
-      { name: "WebXR/VR", proficiency: 85 },
-      { name: "GSAP Animations", proficiency: 90 }
+      { name: "Node.js", proficiency: 95 },
+      { name: "Express", proficiency: 95 },
+      { name: "MongoDB", proficiency: 95 },
+      { name: "TypeScript", proficiency: 95 }
     ]
   },
   {
-    name: "Design & Tools",
-    icon: "fas fa-palette",
+    name: "Tools & Others",
+    icon: "fas fa-tools",
     items: [
-      { name: "Figma", proficiency: 85 },
-      { name: "Adobe Creative Suite", proficiency: 80 },
-      { name: "UI/UX Design", proficiency: 90 },
-      { name: "Design Systems", proficiency: 75 }
+      { name: "Git", proficiency: 95 },
+      { name: "GitHub", proficiency: 95 },
+      { name: "Figma", proficiency: 95 },
+      { name: "UI/UX Design", proficiency: 95 }
     ]
   }
 ];
 
-// Testimonial data
-export const testimonials = [
-  {
-    name: "Michael Johnson",
-    position: "CEO, TechGear",
-    text: "Alex transformed our e-commerce platform with an incredible 3D product configurator that increased our conversion rate by 40%. The attention to detail and technical excellence was exactly what we needed.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=60&h=60"
-  },
-  {
-    name: "Sarah Chen",
-    position: "Gallery Director, ArtSpace",
-    text: "Working with Alex on our VR exhibition was an incredible experience. The immersive environment created for our digital art showcase received outstanding feedback from visitors and artists alike.",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=60&h=60"
-  },
-  {
-    name: "Thomas Wright",
-    position: "Head of Innovation, FinViz",
-    text: "The interactive data visualization dashboard Alex created for our financial services has completely transformed how our clients understand complex market data. It's both beautiful and incredibly functional.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=60&h=60"
-  }
-];
+// All projects url
+export const allProjectsUrl = "https://github.com/Guten-Morgen1302?tab=repositories";
