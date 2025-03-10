@@ -76,19 +76,42 @@ function Preloader() {
   );
 }
 
+function StarBackground() {
+  return (
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      {Array.from({ length: 150 }).map((_, i) => (
+        <div
+          key={i}
+          className="star"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            width: `${Math.random() * 2 + 1}px`,
+            height: `${Math.random() * 2 + 1}px`,
+            animationDelay: `${Math.random() * 5}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 function Home() {
   return (
-    <div className="bg-primary text-foreground">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Portfolio />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
-      <ScrollToTopButton />
+    <div className="bg-cosmic text-foreground relative min-h-screen">
+      <StarBackground />
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Portfolio />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTopButton />
+      </div>
     </div>
   );
 }
