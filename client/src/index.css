@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 0 0% 94%;
+    
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 94%;
+    
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 94%;
+    
+    --primary: 259 64% 41%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 187 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 220 13% 18%;
+    --muted-foreground: 0 0% 64%;
+    
+    --accent: 187 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 25%;
+    --input: 220 13% 18%;
+    --ring: 259 64% 41%;
+    
+    --radius: 0.5rem;
+  }
+
+  .light-mode {
+    --background: 0 0% 96%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --primary: 259 64% 41%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 187 100% 50%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 220 13% 92%;
+    --muted-foreground: 220 13% 40%;
+    
+    --accent: 259 64% 41%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 86%;
+    --input: 220 13% 92%;
+    --ring: 259 64% 41%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-md;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+  }
+  
+  /* Custom fonts */
+  .font-space {
+    font-family: "Space Grotesk", sans-serif;
+  }
+  
+  .font-orbitron {
+    font-family: "Orbitron", sans-serif;
+  }
+  
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+  
+  /* Gradient text for the hero section */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent;
+  }
+  
+  /* Glow effect */
+  .glow-effect {
+    box-shadow: 0 0 15px theme('colors.accent' / 50%);
+  }
+  
+  /* Floating animation */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
