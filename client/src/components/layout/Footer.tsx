@@ -15,39 +15,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="flex flex-wrap justify-center gap-8 mb-6 md:mb-0">
-            <a
-              href="#hero"
-              className="text-neutral/70 hover:text-accent transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-neutral/70 hover:text-accent transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#portfolio"
-              className="text-neutral/70 hover:text-accent transition-colors"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#skills"
-              className="text-neutral/70 hover:text-accent transition-colors"
-            >
-              Skills
-            </a>
-            <a
-              href="#contact"
-              className="text-neutral/70 hover:text-accent transition-colors"
-            >
-              Contact
-            </a>
-          </div>
+          <div>
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
