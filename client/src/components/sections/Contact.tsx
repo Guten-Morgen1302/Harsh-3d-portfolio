@@ -117,25 +117,27 @@ export default function Contact() {
                     <div>
                       <h4 className="text-sm text-neutral/70 mb-1">Email</h4>
                       <a
-                        href="mailto:hello@alexdev.io"
+                        href="mailto:harshpatil1302@gmail.com"
                         className="font-medium hover:text-accent transition-colors"
                       >
-                        hello@alexdev.io
+                        harshpatil1302@gmail.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start">
                     <div className="bg-secondary/20 rounded-lg p-3 text-accent mr-4">
-                      <i className="fas fa-phone"></i>
+                      <i className="fas fa-code-branch"></i>
                     </div>
                     <div>
-                      <h4 className="text-sm text-neutral/70 mb-1">Phone</h4>
+                      <h4 className="text-sm text-neutral/70 mb-1">GitHub</h4>
                       <a
-                        href="tel:+1234567890"
+                        href="https://github.com/Guten-Morgen1302"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="font-medium hover:text-accent transition-colors"
                       >
-                        +1 (234) 567-890
+                        Guten-Morgen1302
                       </a>
                     </div>
                   </div>
@@ -146,7 +148,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-sm text-neutral/70 mb-1">Location</h4>
-                      <p className="font-medium">San Francisco, CA</p>
+                      <p className="font-medium">Mumbai, India</p>
                     </div>
                   </div>
 
@@ -155,32 +157,40 @@ export default function Contact() {
                     <h4 className="text-sm text-neutral/70 mb-4">Follow Me</h4>
                     <div className="flex space-x-4">
                       <motion.a
-                        href="#"
-                        className="bg-neutral-dark/50 hover:bg-secondary/30 transition-colors w-10 h-10 rounded-full flex items-center justify-center text-neutral hover:text-accent"
-                        whileHover={{ y: -3, rotate: 5 }}
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </motion.a>
-                      <motion.a
-                        href="#"
-                        className="bg-neutral-dark/50 hover:bg-secondary/30 transition-colors w-10 h-10 rounded-full flex items-center justify-center text-neutral hover:text-accent"
-                        whileHover={{ y: -3, rotate: 5 }}
-                      >
-                        <i className="fab fa-linkedin-in"></i>
-                      </motion.a>
-                      <motion.a
-                        href="#"
+                        href="https://github.com/Guten-Morgen1302"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-neutral-dark/50 hover:bg-secondary/30 transition-colors w-10 h-10 rounded-full flex items-center justify-center text-neutral hover:text-accent"
                         whileHover={{ y: -3, rotate: 5 }}
                       >
                         <i className="fab fa-github"></i>
                       </motion.a>
                       <motion.a
-                        href="#"
+                        href="https://www.linkedin.com/in/harshpatil13"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-neutral-dark/50 hover:bg-secondary/30 transition-colors w-10 h-10 rounded-full flex items-center justify-center text-neutral hover:text-accent"
                         whileHover={{ y: -3, rotate: 5 }}
                       >
-                        <i className="fab fa-dribbble"></i>
+                        <i className="fab fa-linkedin-in"></i>
+                      </motion.a>
+                      <motion.a
+                        href="https://www.instagram.com/harsh_patil1302/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-neutral-dark/50 hover:bg-secondary/30 transition-colors w-10 h-10 rounded-full flex items-center justify-center text-neutral hover:text-accent"
+                        whileHover={{ y: -3, rotate: 5 }}
+                      >
+                        <i className="fab fa-instagram"></i>
+                      </motion.a>
+                      <motion.a
+                        href="https://discordapp.com/users/941729896550502420"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-neutral-dark/50 hover:bg-secondary/30 transition-colors w-10 h-10 rounded-full flex items-center justify-center text-neutral hover:text-accent"
+                        whileHover={{ y: -3, rotate: 5 }}
+                      >
+                        <i className="fab fa-discord"></i>
                       </motion.a>
                     </div>
                   </div>

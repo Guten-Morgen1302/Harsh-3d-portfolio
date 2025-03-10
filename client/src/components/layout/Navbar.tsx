@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <Link href="#hero" onClick={closeMenu}>
             <a className="text-xl font-orbitron font-bold text-accent">
-              NOVA<span className="text-white">CODE</span>
+              HARSH<span className="text-white">PATIL</span>
             </a>
           </Link>
 

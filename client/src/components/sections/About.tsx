@@ -93,28 +93,28 @@ export default function About() {
                 className="font-inter text-neutral/90 text-lg"
                 variants={fadeInUp}
               >
-                👋 Hello, I'm Harsh Patil, a passionate Web Developer and Designer based in Mumbai, India.
+                👋 Hello, I'm Harsh Patil, a passionate Web Developer and UI/UX Designer specializing in crafting engaging digital experiences.
               </motion.p>
               
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
-                I create user-friendly and visually stunning websites that deliver exceptional user experiences.
+                I blend creative design with clean code to build modern, responsive websites and applications that leave a lasting impression.
               </motion.p>
               
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
-                With a keen eye for detail and a commitment to staying at the forefront of technology trends, I develop solutions that are not only beautiful but also functionally robust and scalable.
+                My expertise spans the full development stack, from creating intuitive user interfaces with React to building robust backend systems with Node.js and Express.
               </motion.p>
               
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
-                I'm constantly learning and exploring new technologies to enhance my skills and create better digital experiences for my clients and users.
+                When I'm not coding, you'll find me exploring new design trends, contributing to open-source projects, and continuously expanding my knowledge in emerging web technologies.
               </motion.p>
             </motion.div>
             
@@ -131,7 +131,7 @@ export default function About() {
                 variants={statItem}
                 whileHover={{ y: -5, boxShadow: "0 5px 10px rgba(0,0,0,0.2)" }}
               >
-                <span className="text-accent font-orbitron text-3xl font-bold">7+</span>
+                <span className="text-accent font-orbitron text-3xl font-bold">4+</span>
                 <p className="text-sm font-inter text-neutral/70">Years Experience</p>
               </motion.div>
               
@@ -140,7 +140,7 @@ export default function About() {
                 variants={statItem}
                 whileHover={{ y: -5, boxShadow: "0 5px 10px rgba(0,0,0,0.2)" }}
               >
-                <span className="text-accent font-orbitron text-3xl font-bold">50+</span>
+                <span className="text-accent font-orbitron text-3xl font-bold">25+</span>
                 <p className="text-sm font-inter text-neutral/70">Projects Completed</p>
               </motion.div>
               
@@ -149,7 +149,7 @@ export default function About() {
                 variants={statItem}
                 whileHover={{ y: -5, boxShadow: "0 5px 10px rgba(0,0,0,0.2)" }}
               >
-                <span className="text-accent font-orbitron text-3xl font-bold">30+</span>
+                <span className="text-accent font-orbitron text-3xl font-bold">15+</span>
                 <p className="text-sm font-inter text-neutral/70">Happy Clients</p>
               </motion.div>
               
@@ -158,8 +158,8 @@ export default function About() {
                 variants={statItem}
                 whileHover={{ y: -5, boxShadow: "0 5px 10px rgba(0,0,0,0.2)" }}
               >
-                <span className="text-accent font-orbitron text-3xl font-bold">12</span>
-                <p className="text-sm font-inter text-neutral/70">Awards Won</p>
+                <span className="text-accent font-orbitron text-3xl font-bold">6</span>
+                <p className="text-sm font-inter text-neutral/70">Open Source Projects</p>
               </motion.div>
             </motion.div>
           </div>
