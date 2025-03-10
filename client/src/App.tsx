@@ -73,9 +73,7 @@ function Preloader() {
             style={{
               boxShadow: i % 5 === 0 ? '0 0 4px 1px rgba(191, 219, 254, 0.8)' : 
                         i % 4 === 0 ? '0 0 4px 1px rgba(216, 180, 254, 0.8)' : 
-                        '0 0 2px 1px rgba(255, 255, 255, 0.5)'
-            }}
-            style={{
+                        '0 0 2px 1px rgba(255, 255, 255, 0.5)',
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
             }}
