@@ -1,9 +1,37 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ThemeToggle from "../ui/ThemeToggle";
+import { useLocation } from "wouter";
 import { Link } from "wouter";
+import ThemeToggle from "../ui/ThemeToggle";
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [location] = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'portfolio', 'contact'];
+
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        if (!element) return false;
+
+        const rect = element.getBoundingClientRect();
+        return rect.top <= 150 && rect.bottom >= 150;
+      }) || 'home';
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initialize on mount
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -43,21 +71,66 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#hero" className="text-neutral hover:text-accent transition-colors">
+            <a href="#home" className={`text-neutral transition-colors relative ${activeSection === 'home' ? 'text-accent' : ''}`}>
               Home
+              {activeSection === 'home' && (
+                <motion.span
+                  layoutId="navIndicator"
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
             </a>
-            <a href="#about" className="text-neutral hover:text-accent transition-colors">
+            <a href="#about" className={`text-neutral transition-colors relative ${activeSection === 'about' ? 'text-accent' : ''}`}>
               About
+              {activeSection === 'about' && (
+                <motion.span
+                  layoutId="navIndicator"
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
             </a>
-            <a href="#portfolio" className="text-neutral hover:text-accent transition-colors">
+            <a href="#portfolio" className={`text-neutral transition-colors relative ${activeSection === 'portfolio' ? 'text-accent' : ''}`}>
               Portfolio
+              {activeSection === 'portfolio' && (
+                <motion.span
+                  layoutId="navIndicator"
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
             </a>
-            <a href="#skills" className="text-neutral hover:text-accent transition-colors">
+            <a href="#skills" className={`text-neutral transition-colors relative ${activeSection === 'skills' ? 'text-accent' : ''}`}>
               Skills
+              {activeSection === 'skills' && (
+                <motion.span
+                  layoutId="navIndicator"
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
             </a>
 
-            <a href="#contact" className="text-neutral hover:text-accent transition-colors">
+            <a href="#contact" className={`text-neutral transition-colors relative ${activeSection === 'contact' ? 'text-accent' : ''}`}>
               Contact
+              {activeSection === 'contact' && (
+                <motion.span
+                  layoutId="navIndicator"
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
             </a>
             <ThemeToggle />
           </div>
@@ -85,40 +158,85 @@ export default function Navbar() {
           >
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               <a
-                href="#hero"
-                className="text-neutral hover:text-accent py-2 transition-colors"
+                href="#home"
+                className={`text-neutral hover:text-accent py-2 transition-colors relative ${activeSection === 'home' ? 'text-accent' : ''}`}
                 onClick={closeMenu}
               >
                 Home
+                {activeSection === 'home' && (
+                  <motion.span
+                    layoutId="navIndicator"
+                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
               </a>
               <a
                 href="#about"
-                className="text-neutral hover:text-accent py-2 transition-colors"
+                className={`text-neutral hover:text-accent py-2 transition-colors relative ${activeSection === 'about' ? 'text-accent' : ''}`}
                 onClick={closeMenu}
               >
                 About
+                {activeSection === 'about' && (
+                  <motion.span
+                    layoutId="navIndicator"
+                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
               </a>
               <a
                 href="#portfolio"
-                className="text-neutral hover:text-accent py-2 transition-colors"
+                className={`text-neutral hover:text-accent py-2 transition-colors relative ${activeSection === 'portfolio' ? 'text-accent' : ''}`}
                 onClick={closeMenu}
               >
                 Portfolio
+                {activeSection === 'portfolio' && (
+                  <motion.span
+                    layoutId="navIndicator"
+                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
               </a>
               <a
                 href="#skills"
-                className="text-neutral hover:text-accent py-2 transition-colors"
+                className={`text-neutral hover:text-accent py-2 transition-colors relative ${activeSection === 'skills' ? 'text-accent' : ''}`}
                 onClick={closeMenu}
               >
                 Skills
+                {activeSection === 'skills' && (
+                  <motion.span
+                    layoutId="navIndicator"
+                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
               </a>
 
               <a
                 href="#contact"
-                className="text-neutral hover:text-accent py-2 transition-colors"
+                className={`text-neutral hover:text-accent py-2 transition-colors relative ${activeSection === 'contact' ? 'text-accent' : ''}`}
                 onClick={closeMenu}
               >
                 Contact
+                {activeSection === 'contact' && (
+                  <motion.span
+                    layoutId="navIndicator"
+                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
               </a>
               <div className="flex justify-between">
                 <div className="text-neutral hover:text-accent transition-colors py-2">
