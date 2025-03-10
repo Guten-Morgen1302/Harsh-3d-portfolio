@@ -17,7 +17,8 @@ function Preloader() {
   return (
     <div className="fixed inset-0 bg-primary z-50 flex items-center justify-center">
       <div className="text-accent animate-pulse">
-        <div className="text-4xl font-orbitron">LOADING</div>
+        <div className="text-4xl font-orbitron">HARSH PATIL</div>
+        <div className="text-xl text-center mt-2">UI/UX Designer & Developer</div>
       </div>
     </div>
   );

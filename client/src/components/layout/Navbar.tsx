@@ -37,11 +37,9 @@ export default function Navbar() {
     <nav className={navbarClasses}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
-          <Link href="#hero" onClick={closeMenu}>
-            <a className="text-xl font-orbitron font-bold text-accent">
-              HARSH<span className="text-white">PATIL</span>
-            </a>
-          </Link>
+          <a href="#hero" onClick={closeMenu} className="text-xl font-orbitron font-bold text-accent">
+            HARSH<span className="text-white">PATIL</span>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -57,9 +55,7 @@ export default function Navbar() {
             <a href="#skills" className="text-neutral hover:text-accent transition-colors">
               Skills
             </a>
-            <a href="#testimonials" className="text-neutral hover:text-accent transition-colors">
-              Testimonials
-            </a>
+
             <a href="#contact" className="text-neutral hover:text-accent transition-colors">
               Contact
             </a>
@@ -116,13 +112,7 @@ export default function Navbar() {
               >
                 Skills
               </a>
-              <a
-                href="#testimonials"
-                className="text-neutral hover:text-accent py-2 transition-colors"
-                onClick={closeMenu}
-              >
-                Testimonials
-              </a>
+
               <a
                 href="#contact"
                 className="text-neutral hover:text-accent py-2 transition-colors"
