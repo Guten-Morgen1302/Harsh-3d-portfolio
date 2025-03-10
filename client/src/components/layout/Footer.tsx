@@ -15,8 +15,6 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
-
           {/* Social Media Icons */}
           <div className="flex space-x-4">
             <motion.a
