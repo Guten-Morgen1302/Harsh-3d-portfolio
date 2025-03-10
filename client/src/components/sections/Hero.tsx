@@ -258,21 +258,83 @@ export default function Hero() {
               </motion.span>
 
               <div className="overflow-hidden mt-2">
-                <div className="flex flex-wrap">
-                  <span className="mr-4">
-                    {"UI/UX Designer & Web Developer".split("").map((char, charIndex) => (
-                      <motion.span
-                        key={`role-${charIndex}`}
-                        custom={charIndex * 0.05}
-                        variants={letterAnimVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="inline-block"
-                      >
-                        {char}
-                      </motion.span>
-                    ))}
-                  </span>
+                <div className="flex flex-wrap h-8">
+                  {/* Animated typing effect with alternating roles */}
+                  <motion.div
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    className="relative flex items-center"
+                  >
+                    <motion.span
+                      key="designer-role"
+                      initial={{ display: "block" }}
+                      animate={{ 
+                        display: ["block", "block", "none", "none"],
+                      }}
+                      transition={{
+                        duration: 6,
+                        times: [0, 0.4, 0.5, 1],
+                        repeat: Infinity,
+                        repeatDelay: 0
+                      }}
+                      className="absolute left-0"
+                    >
+                      <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent font-semibold">
+                        {"UI/UX Designer".split("").map((char, idx) => (
+                          <motion.span
+                            key={`designer-${idx}`}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ 
+                              opacity: 1, 
+                              y: 0,
+                              transition: {
+                                delay: idx * 0.08
+                              }
+                            }}
+                            exit={{ opacity: 0 }}
+                            className="inline-block"
+                          >
+                            {char}
+                          </motion.span>
+                        ))}
+                      </span>
+                    </motion.span>
+                    
+                    <motion.span
+                      key="developer-role"
+                      initial={{ display: "none" }}
+                      animate={{ 
+                        display: ["none", "none", "block", "block"],
+                      }}
+                      transition={{
+                        duration: 6,
+                        times: [0, 0.4, 0.5, 1],
+                        repeat: Infinity,
+                        repeatDelay: 0
+                      }}
+                      className="absolute left-0"
+                    >
+                      <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent font-semibold">
+                        {"Web Developer".split("").map((char, idx) => (
+                          <motion.span
+                            key={`developer-${idx}`}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ 
+                              opacity: 1, 
+                              y: 0,
+                              transition: {
+                                delay: idx * 0.08
+                              }
+                            }}
+                            exit={{ opacity: 0 }}
+                            className="inline-block"
+                          >
+                            {char}
+                          </motion.span>
+                        ))}
+                      </span>
+                    </motion.span>
+                  </motion.div>
                 </div>
               </div>
             </motion.h1>
