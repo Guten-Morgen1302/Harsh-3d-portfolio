@@ -9,7 +9,6 @@ import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Portfolio from "./components/sections/Portfolio";
 import Skills from "./components/sections/Skills";
-import Testimonials from "./components/sections/Testimonials";
 import Contact from "./components/sections/Contact";
 import ScrollToTopButton from "./components/ui/ScrollToTopButton";
 import { motion } from "framer-motion";
@@ -33,7 +32,6 @@ function Home() {
         <About />
         <Portfolio />
         <Skills />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />
