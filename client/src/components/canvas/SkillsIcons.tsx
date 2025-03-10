@@ -13,8 +13,8 @@ function SkillCube({ icon, index, delay }: SkillCubeProps) {
   const [hover, setHover] = useState(false);
   
   // Calculate grid position in a circular pattern
-  const angle = (index / 8) * Math.PI * 2; // Distribute around a circle
-  const radius = 140; // Circle radius
+  const angle = (index / 11) * Math.PI * 2; // Distribute around a circle (adjusted for 11 skills)
+  const radius = 160; // Circle radius (increased to accommodate more skills)
   const x = Math.cos(angle) * radius;
   const y = Math.sin(angle) * radius;
 
@@ -124,14 +124,17 @@ function SkillCube({ icon, index, delay }: SkillCubeProps) {
 // Get full technology name from short code
 function getFullName(icon: string): string {
   const names: Record<string, string> = {
+    "HTML": "HTML",
+    "CSS": "CSS",
     "JS": "JavaScript",
     "TS": "TypeScript",
     "R": "React",
-    "3JS": "Three.js",
     "N": "Node.js",
-    "Vue": "Vue.js",
-    "XR": "WebXR",
-    "B": "Blender"
+    "TW": "Tailwind CSS",
+    "DB": "MongoDB",
+    "Ex": "Express",
+    "Git": "Git",
+    "Fig": "Figma"
   };
   
   return names[icon] || icon;
@@ -165,14 +168,17 @@ export default function SkillsIcons() {
   }, []);
   
   const skills = [
-    { icon: "JS", delay: 0 },
-    { icon: "TS", delay: 1 },
-    { icon: "R", delay: 2 },
-    { icon: "3JS", delay: 3 },
-    { icon: "N", delay: 4 },
-    { icon: "Vue", delay: 5 },
-    { icon: "XR", delay: 6 },
-    { icon: "B", delay: 7 }
+    { icon: "HTML", delay: 0 },
+    { icon: "CSS", delay: 1 },
+    { icon: "JS", delay: 2 },
+    { icon: "TS", delay: 3 },
+    { icon: "R", delay: 4 },
+    { icon: "N", delay: 5 },
+    { icon: "TW", delay: 6 },
+    { icon: "DB", delay: 7 },
+    { icon: "Ex", delay: 8 },
+    { icon: "Git", delay: 9 },
+    { icon: "Fig", delay: 10 }
   ];
 
   return (

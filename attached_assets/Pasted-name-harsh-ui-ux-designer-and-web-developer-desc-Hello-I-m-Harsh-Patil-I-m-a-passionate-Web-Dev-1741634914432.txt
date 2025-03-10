@@ -1,0 +1,113 @@
+name harsh 
+ui/ux designer and web developer
+
+desc:
+Hello, I'm Harsh Patil
+I'm a passionate Web Developer and Designer based in Mumbai, India. I create user-friendly and visually stunning websites that deliver exceptional user experiences.
+
+With a keen eye for detail and a commitment to staying at the forefront of technology trends, I develop solutions that are not only beautiful but also functionally robust and scalable.
+
+Mumbai, India
+harshabhaypatil@gmail.com
+skills
+My Skills
+HTML
+HTML
+HTML
+Advanced proficiency
+
+CSS
+CSS
+CSS
+Advanced proficiency
+
+JavaScript
+JavaScript
+JavaScript
+Advanced proficiency
+
+React
+React
+React
+Advanced proficiency
+
+Node.js
+Node.js
+Node.js
+Advanced proficiency
+
+GitHub
+GitHub
+GitHub
+Advanced proficiency
+
+Tailwind CSS
+Tailwind CSS
+Tailwind CSS
+Advanced proficiency
+
+MongoDB
+MongoDB
+MongoDB
+Advanced proficiency
+
+Express
+Express
+Express
+Advanced proficiency
+
+Git
+Git
+Git
+Advanced proficiency
+
+Figma
+Figma
+Figma
+Advanced proficiency
+
+TypeScript
+TypeScript
+TypeScript
+Adv
+
+projects
+Weather App
+Real-time weather application with forecast capabilities and location search
+live demo: https://weather-app-25.vercel.app/
+github: https://github.com/Guten-Morgen1302/weather-app
+E-commerce Platform
+E-commerce platform with integrated payment processing and inventory management
+live demo: https://shop-easily.vercel.app/
+github: https://github.com/Guten-Morgen1302/E-commerce-Platform
+Task Management System
+Task management system with real-time updates and team collaboration features
+live demo: https://task-tracking-platform.vercel.app/
+github: https://github.com/Guten-Morgen1302/Task-Management-System
+Social Media Dashboard
+Social media dashboard with analytics and content scheduling capabilities
+live demo: https://social-sync-dashboard.vercel.app/
+github: https://github.com/Guten-Morgen1302/Social-Media-Dashboard
+Fitness Tracking App
+Fitness tracking application with personalized workout plans and progress metrics
+live demo: https://fitness-hub-pro.vercel.app/
+github: https://github.com/Guten-Morgen1302/FitnessHub
+Recipe Sharing Platform
+Recipe sharing platform with ingredient search and meal planning features
+live demo: https://cook-with-us.vercel.app/
+github: https://github.com/Guten-Morgen1302/Recipe-Sharing-Platform
+
+use this above projects and also include the live demo and github when we click i mena like when we bring cursor on it lmao and remove allprojects tat u had added lmfao and use related images to it broo 
+
+view all projects: https://github.com/Guten-Morgen1302?tab=repositories
+
+make a clickable link 
+
+social media:
+
+linkden : https://www.linkedin.com/in/harshpatil13
+instagram: https://www.instagram.com/harsh_patil1302/
+github: https://github.com/Guten-Morgen1302
+discord: https://discordapp.com/users/941729896550502420
+
+use this and remove other uncessary social media from the website

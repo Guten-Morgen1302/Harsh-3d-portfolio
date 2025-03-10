@@ -93,28 +93,28 @@ export default function About() {
                 className="font-inter text-neutral/90 text-lg"
                 variants={fadeInUp}
               >
-                👋 Hi, I'm Alex, a creative developer with over 7 years of experience in building immersive digital experiences.
+                👋 Hello, I'm Harsh Patil, a passionate Web Developer and Designer based in Mumbai, India.
               </motion.p>
               
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
-                I blend technical expertise with creative vision to craft interactive websites, 3D visualizations, and digital experiences that stand out in today's crowded digital landscape.
+                I create user-friendly and visually stunning websites that deliver exceptional user experiences.
               </motion.p>
               
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
-                My approach combines cutting-edge technologies with human-centered design principles to create memorable digital journeys that engage and inspire.
+                With a keen eye for detail and a commitment to staying at the forefront of technology trends, I develop solutions that are not only beautiful but also functionally robust and scalable.
               </motion.p>
               
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or hiking with my camera to capture nature's beauty.
+                I'm constantly learning and exploring new technologies to enhance my skills and create better digital experiences for my clients and users.
               </motion.p>
             </motion.div>
             

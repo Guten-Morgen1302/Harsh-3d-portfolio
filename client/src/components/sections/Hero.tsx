@@ -196,22 +196,20 @@ export default function Hero() {
             >
               <div className="overflow-hidden mb-2">
                 <div className="flex flex-wrap">
-                  {titleWords.slice(0, 2).map((word, wordIndex) => (
-                    <span key={wordIndex} className="mr-4">
-                      {word.split("").map((char, charIndex) => (
-                        <motion.span
-                          key={`${wordIndex}-${charIndex}`}
-                          custom={wordIndex + charIndex * 0.1}
-                          variants={letterAnimVariants}
-                          initial="hidden"
-                          animate="visible"
-                          className="inline-block"
-                        >
-                          {char}
-                        </motion.span>
-                      ))}
-                    </span>
-                  ))}
+                  <span className="mr-4">
+                    {"Hello, I'm".split("").map((char, charIndex) => (
+                      <motion.span
+                        key={`hello-${charIndex}`}
+                        custom={charIndex * 0.1}
+                        variants={letterAnimVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="inline-block"
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </span>
                 </div>
               </div>
               
@@ -219,27 +217,25 @@ export default function Hero() {
                 className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent inline-block"
                 variants={highlightedTextVariants}
               >
-                {titleWords.slice(2, 4).join(" ")}
+                Harsh Patil
               </motion.span>
               
               <div className="overflow-hidden mt-2">
                 <div className="flex flex-wrap">
-                  {titleWords.slice(4).map((word, wordIndex) => (
-                    <span key={wordIndex} className="mr-4">
-                      {word.split("").map((char, charIndex) => (
-                        <motion.span
-                          key={`${wordIndex + 4}-${charIndex}`}
-                          custom={(wordIndex + 4) + charIndex * 0.1}
-                          variants={letterAnimVariants}
-                          initial="hidden"
-                          animate="visible"
-                          className="inline-block"
-                        >
-                          {char}
-                        </motion.span>
-                      ))}
-                    </span>
-                  ))}
+                  <span className="mr-4">
+                    {"UI/UX Designer & Web Developer".split("").map((char, charIndex) => (
+                      <motion.span
+                        key={`role-${charIndex}`}
+                        custom={charIndex * 0.05}
+                        variants={letterAnimVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="inline-block"
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </span>
                 </div>
               </div>
             </motion.h1>
@@ -248,8 +244,8 @@ export default function Hero() {
               className="font-inter text-lg md:text-xl text-neutral/80 mb-8 max-w-lg"
               variants={fadeInUp}
             >
-              Creative developer specializing in interactive 3D websites, AR/VR experiences, 
-              and cutting-edge digital solutions.
+              I'm a passionate Web Developer and Designer based in Mumbai, India. 
+              I create user-friendly and visually stunning websites that deliver exceptional user experiences.
             </motion.p>
             
             <motion.div 
@@ -292,10 +288,17 @@ export default function Hero() {
               className="flex items-center justify-center md:justify-start gap-5 mt-8"
               variants={fadeInUp}
             >
-              {['github', 'dribbble', 'linkedin', 'twitter'].map((platform, i) => (
+              {[
+                { name: 'github', url: 'https://github.com/Guten-Morgen1302' },
+                { name: 'linkedin', url: 'https://www.linkedin.com/in/harshpatil13' },
+                { name: 'instagram', url: 'https://www.instagram.com/harsh_patil1302/' },
+                { name: 'discord', url: 'https://discordapp.com/users/941729896550502420' }
+              ].map((platform, i) => (
                 <motion.a
-                  key={platform}
-                  href={`#${platform}`}
+                  key={platform.name}
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-10 h-10 rounded-full flex items-center justify-center border ${
                     isDarkMode 
                       ? "border-neutral-700 hover:border-accent hover:text-accent" 
@@ -313,7 +316,7 @@ export default function Hero() {
                     transition: { delay: 1.2 + i * 0.1 }
                   }}
                 >
-                  <span>{platform[0].toUpperCase()}</span>
+                  <span>{platform.name[0].toUpperCase()}</span>
                 </motion.a>
               ))}
             </motion.div>
