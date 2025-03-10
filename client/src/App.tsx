@@ -33,29 +33,48 @@ function Preloader() {
             ease: "easeInOut"
           }}
         >
-          <div className="text-6xl font-orbitron font-bold tracking-wider mb-4
-                        bg-clip-text text-transparent bg-gradient-to-r 
-                        from-blue-500 via-purple-500 to-green-500
-                        filter drop-shadow-[0_0_10px_rgba(79,70,229,0.8)]">
-            LOADING
-          </div>
+          <motion.div 
+            className="text-6xl font-orbitron font-bold tracking-wider mb-4
+                      bg-clip-text text-transparent bg-gradient-to-r 
+                      from-blue-500 via-purple-500 to-green-500
+                      filter drop-shadow-[0_0_15px_rgba(79,70,229,0.9)]"
+            animate={{
+              textShadow: [
+                "0 0 8px rgba(124, 58, 237, 0.7)",
+                "0 0 16px rgba(79, 70, 229, 0.9)",
+                "0 0 8px rgba(124, 58, 237, 0.7)"
+              ]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            COSMIC PORTFOLIO
+          </motion.div>
           <motion.div 
             className="text-xl text-cyan-300 tracking-wide font-light"
             initial={{ opacity: 0 }}
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            Entering Universe
+            Entering Harsh's Universe
           </motion.div>
         </motion.div>
       </div>
       
-      {/* Stars background effect */}
+      {/* Enhanced cosmic background with parallax stars */}
       <div className="absolute inset-0 overflow-hidden">
-        {Array.from({ length: 50 }).map((_, i) => (
+        {Array.from({ length: 100 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full"
+            className={`absolute ${i % 3 === 0 ? 'w-1.5 h-1.5' : 'w-1 h-1'} ${i % 5 === 0 ? 'bg-blue-300' : i % 4 === 0 ? 'bg-purple-300' : 'bg-white'} rounded-full`}
+            style={{
+              boxShadow: i % 5 === 0 ? '0 0 4px 1px rgba(191, 219, 254, 0.8)' : 
+                        i % 4 === 0 ? '0 0 4px 1px rgba(216, 180, 254, 0.8)' : 
+                        '0 0 2px 1px rgba(255, 255, 255, 0.5)'
+            }}
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,

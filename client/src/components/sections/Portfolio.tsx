@@ -33,9 +33,44 @@ export default function Portfolio() {
       transition: { duration: 0.5 }
     }
   };
+  
+  // Cosmic particle effect for the portfolio section
+  const CosmicParticles = () => {
+    return (
+      <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+        {Array.from({ length: 30 }).map((_, i) => (
+          <motion.div
+            key={`particle-${i}`}
+            className="absolute w-1 h-1 rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              backgroundColor: i % 3 === 0 ? '#93c5fd' : i % 2 === 0 ? '#c4b5fd' : '#f9fafb',
+              boxShadow: i % 3 === 0 ? '0 0 4px 1px rgba(147, 197, 253, 0.6)' : 
+                        i % 2 === 0 ? '0 0 4px 1px rgba(196, 181, 253, 0.6)' : 
+                        '0 0 2px 1px rgba(249, 250, 251, 0.5)'
+            }}
+            animate={{
+              y: [0, -Math.random() * 100 - 50],
+              x: [0, (Math.random() - 0.5) * 50],
+              opacity: [0, 0.7, 0],
+              scale: [0, Math.random() * 1.5 + 0.5, 0]
+            }}
+            transition={{
+              duration: Math.random() * 5 + 10,
+              repeat: Infinity,
+              repeatType: "loop",
+              delay: Math.random() * 5
+            }}
+          />
+        ))}
+      </div>
+    );
+  };
 
   return (
     <section id="portfolio" className="py-20 relative overflow-hidden">
+      <CosmicParticles />
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
           initial="hidden"

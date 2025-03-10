@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import Avatar from "../canvas/Avatar";
+import OrbitalRing from "./OrbitalRing"; // Assuming OrbitalRing component exists
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -56,6 +57,7 @@ export default function About() {
       ref={sectionRef}
       className="min-h-screen flex items-center py-20 relative overflow-hidden"
     >
+      <OrbitalRing /> {/* Added OrbitalRing component */}
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Avatar Container */}
@@ -68,7 +70,7 @@ export default function About() {
           >
             <Avatar />
           </motion.div>
-          
+
           {/* Text content */}
           <div className="md:w-1/2 md:pl-12">
             <motion.h2 
@@ -80,7 +82,7 @@ export default function About() {
             >
               <span className="text-accent">About</span> Me
             </motion.h2>
-            
+
             {/* Bio text with animation */}
             <motion.div 
               ref={bioRef}
@@ -95,21 +97,21 @@ export default function About() {
               >
                 👋 Hello, I'm Harsh Patil, a passionate Web Developer and UI/UX Designer specializing in crafting engaging digital experiences.
               </motion.p>
-              
+
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
                 I blend creative design with clean code to build modern, responsive websites and applications that leave a lasting impression.
               </motion.p>
-              
+
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
               >
                 My expertise spans the full development stack, from creating intuitive user interfaces with React to building robust backend systems with Node.js and Express.
               </motion.p>
-              
+
               <motion.p 
                 className="font-inter text-neutral/80"
                 variants={fadeInUp}
@@ -117,7 +119,7 @@ export default function About() {
                 When I'm not coding, you'll find me exploring new design trends, contributing to open-source projects, and continuously expanding my knowledge in emerging web technologies.
               </motion.p>
             </motion.div>
-            
+
             {/* Stats */}
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"
@@ -134,7 +136,7 @@ export default function About() {
                 <span className="text-accent font-orbitron text-3xl font-bold">4+</span>
                 <p className="text-sm font-inter text-neutral/70">Years Experience</p>
               </motion.div>
-              
+
               <motion.div 
                 className="text-center p-4 bg-neutral-dark/50 rounded-lg"
                 variants={statItem}
@@ -143,7 +145,7 @@ export default function About() {
                 <span className="text-accent font-orbitron text-3xl font-bold">25+</span>
                 <p className="text-sm font-inter text-neutral/70">Projects Completed</p>
               </motion.div>
-              
+
               <motion.div 
                 className="text-center p-4 bg-neutral-dark/50 rounded-lg"
                 variants={statItem}
@@ -152,7 +154,7 @@ export default function About() {
                 <span className="text-accent font-orbitron text-3xl font-bold">15+</span>
                 <p className="text-sm font-inter text-neutral/70">Happy Clients</p>
               </motion.div>
-              
+
               <motion.div 
                 className="text-center p-4 bg-neutral-dark/50 rounded-lg"
                 variants={statItem}

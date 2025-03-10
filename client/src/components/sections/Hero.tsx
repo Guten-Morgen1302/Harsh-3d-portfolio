@@ -171,13 +171,50 @@ export default function Hero() {
           }}
         />
         
-        {/* Technical grid pattern */}
-        <div className="absolute inset-0 opacity-10" 
-          style={{
-            backgroundImage: `radial-gradient(circle at 30px 30px, ${isDarkMode ? '#ffffff' : '#000000'} 2px, transparent 0)`,
-            backgroundSize: '60px 60px'
-          }}
-        />
+        {/* Cosmic background with particles */}
+        <div className="absolute inset-0" style={{ overflow: 'hidden' }}>
+          {/* Animated stars */}
+          {Array.from({ length: 50 }).map((_, i) => (
+            <motion.div
+              key={`star-${i}`}
+              className={`absolute ${i % 4 === 0 ? 'w-1.5 h-1.5' : 'w-1 h-1'} ${i % 5 === 0 ? 'bg-blue-400' : i % 3 === 0 ? 'bg-purple-400' : 'bg-white'} rounded-full`}
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.7 + 0.3,
+                boxShadow: i % 5 === 0 ? '0 0 6px 2px rgba(96, 165, 250, 0.6)' : 
+                          i % 3 === 0 ? '0 0 6px 2px rgba(192, 132, 252, 0.6)' : 
+                          '0 0 3px 1px rgba(255, 255, 255, 0.5)'
+              }}
+              animate={{
+                opacity: [0.4, 1, 0.4],
+                scale: [1, i % 7 === 0 ? 1.5 : 1.2, 1]
+              }}
+              transition={{
+                duration: 3 + Math.random() * 5,
+                repeat: Infinity,
+                delay: Math.random() * 5
+              }}
+            />
+          ))}
+          
+          {/* Nebula effect */}
+          <div className="absolute inset-0 opacity-10"
+            style={{
+              background: isDarkMode 
+                ? 'radial-gradient(circle at 30% 50%, rgba(139, 92, 246, 0.3), transparent 30%), radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.3), transparent 40%)'
+                : 'radial-gradient(circle at 30% 50%, rgba(139, 92, 246, 0.15), transparent 30%), radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.15), transparent 40%)'
+            }}
+          />
+          
+          {/* Technical grid pattern - more subtle now */}
+          <div className="absolute inset-0 opacity-5" 
+            style={{
+              backgroundImage: `radial-gradient(circle at 30px 30px, ${isDarkMode ? '#ffffff' : '#000000'} 1px, transparent 0)`,
+              backgroundSize: '60px 60px'
+            }}
+          />
+        </div>
       </div>
       
       <div className="container mx-auto px-4 md:px-8 relative z-10">
