@@ -33,5 +33,5 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
-  base: process.env.VITE_BASE_PATH || "/Harsh-3d-portfolio", // This line is now inside the object
+  base: '/Harsh-3d-portfolio/', // The exact path where your app will be hosted
 });
