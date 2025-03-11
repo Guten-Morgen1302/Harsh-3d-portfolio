@@ -1,3 +1,4 @@
+
 import { createContext, useState, useContext, useEffect, ReactNode } from "react";
 
 interface ThemeContextType {
@@ -48,17 +49,23 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
         document.documentElement.style.setProperty("--secondary", "180 100% 50%"); // Bright cyan
         document.documentElement.style.setProperty("--foreground", "0 0% 100%"); // Pure white text
         document.documentElement.style.setProperty("--muted", "260 70% 35%"); // Deep muted purple
+        document.documentElement.style.setProperty("--neutral", "217 10% 70%");
+        document.documentElement.style.setProperty("--neutral-dark", "240 30% 10%");
+        document.documentElement.style.setProperty("--accent", "187 100% 60%");
       } else {
         // Light cosmic theme - lighter purples, softer glows
         document.documentElement.classList.remove("dark");
         document.documentElement.classList.add("light");
         document.body.classList.add("light-mode");
 
-        document.documentElement.style.setProperty("--background", "260 60% 40%"); // Medium-light purple
-        document.documentElement.style.setProperty("--primary", "260 60% 60%"); // Lighter purple
-        document.documentElement.style.setProperty("--secondary", "180 90% 45%"); // Softer cyan
-        document.documentElement.style.setProperty("--foreground", "0 0% 100%"); // Keep white text
-        document.documentElement.style.setProperty("--muted", "260 50% 50%"); // Lighter muted purple
+        document.documentElement.style.setProperty("--background", "220 20% 90%"); // Light blue-gray like daylight sky
+        document.documentElement.style.setProperty("--primary", "259 75% 45%"); // Lighter purple
+        document.documentElement.style.setProperty("--secondary", "187 90% 45%"); // Softer cyan
+        document.documentElement.style.setProperty("--foreground", "240 30% 10%"); // Dark text
+        document.documentElement.style.setProperty("--muted", "220 20% 80%"); // Lighter muted purple
+        document.documentElement.style.setProperty("--neutral", "240 10% 40%");
+        document.documentElement.style.setProperty("--neutral-dark", "220 20% 80%");
+        document.documentElement.style.setProperty("--accent", "259 75% 45%");
       }
     };
 
