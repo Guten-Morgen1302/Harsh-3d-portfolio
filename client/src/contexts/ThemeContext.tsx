@@ -36,24 +36,13 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   useEffect(() => {
     // This function keeps the site always in cosmic theme, but with light/dark variants
     const applyCosmicTheme = () => {
-      // Base cosmic theme that's always applied (purple space theme)
-      const baseStyles = {
-        "--cosmic": "260 75% 25%", // Deep space purple
-        "--cosmic-accent": "180 100% 60%" // Bright cyan glow
-      };
-      
-      // Apply base cosmic styles regardless of mode
-      Object.entries(baseStyles).forEach(([key, value]) => {
-        document.documentElement.style.setProperty(key, value as string);
-      });
-      
       // Apply theme-specific cosmic variants
       if (isDarkMode) {
         // Dark cosmic theme - deeper purple, brighter accents
         document.documentElement.classList.add("dark");
         document.documentElement.classList.remove("light");
         document.body.classList.remove("light-mode");
-        
+
         document.documentElement.style.setProperty("--background", "260 75% 25%"); // Deep purple space
         document.documentElement.style.setProperty("--primary", "260 75% 45%"); // Vibrant purple
         document.documentElement.style.setProperty("--secondary", "180 100% 50%"); // Bright cyan
@@ -64,7 +53,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
         document.documentElement.classList.remove("dark");
         document.documentElement.classList.add("light");
         document.body.classList.add("light-mode");
-        
+
         document.documentElement.style.setProperty("--background", "260 60% 40%"); // Medium-light purple
         document.documentElement.style.setProperty("--primary", "260 60% 60%"); // Lighter purple
         document.documentElement.style.setProperty("--secondary", "180 90% 45%"); // Softer cyan
@@ -72,10 +61,10 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
         document.documentElement.style.setProperty("--muted", "260 50% 50%"); // Lighter muted purple
       }
     };
-    
+
     // Apply the cosmic theme
     applyCosmicTheme();
-    
+
     // Save preference to local storage
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
