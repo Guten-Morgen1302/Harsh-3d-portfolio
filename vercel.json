@@ -2,8 +2,7 @@
   "builds": [
     {
       "src": "client/index.html",
-      "use": "@vercel/static",
-      "outputDirectory": "dist/public"
+      "use": "@vercel/static"
     }
   ]
 }
