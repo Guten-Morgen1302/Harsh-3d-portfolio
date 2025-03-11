@@ -14,7 +14,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -22,19 +22,19 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       setIsSubmitting(true);
-      
+
       // Send form data to backend
       await apiRequest("POST", "/api/contact", formData);
-      
+
       // Show success message
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
-      
+
       // Reset form
       setFormData({
         name: "",
@@ -45,7 +45,8 @@ export default function Contact() {
     } catch (error) {
       toast({
         title: "Message not sent",
-        description: "There was a problem sending your message. Please try again.",
+        description:
+          "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -75,7 +76,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden bg-neutral-dark/20">
+    <section
+      id="contact"
+      className="py-20 relative overflow-hidden bg-neutral-dark/20"
+    >
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
           initial="hidden"
@@ -94,8 +98,8 @@ export default function Contact() {
             className="font-inter text-neutral/80 text-center max-w-2xl mx-auto mb-12"
             variants={itemVariant}
           >
-            Have a project in mind or want to discuss a potential collaboration? I'd
-            love to hear from you.
+            Have a project in mind or want to discuss a potential collaboration?
+            I'd love to hear from you.
           </motion.p>
 
           <div className="flex flex-col md:flex-row md:space-x-8">
@@ -222,7 +226,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full bg-neutral-dark/50 border border-neutral/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-transparent transition-all"
-                        placeholder="John Doe"
+                        placeholder="eg: Harsh Patil"
                       />
                     </div>
 
@@ -241,7 +245,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full bg-neutral-dark/50 border border-neutral/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-transparent transition-all"
-                        placeholder="john@example.com"
+                        placeholder="eg: harshabhaypatil@gmai.com"
                       />
                     </div>
                   </div>
@@ -318,7 +322,8 @@ export default function Contact() {
                         </>
                       ) : (
                         <>
-                          Send Message <i className="fas fa-paper-plane ml-2"></i>
+                          Send Message{" "}
+                          <i className="fas fa-paper-plane ml-2"></i>
                         </>
                       )}
                     </motion.button>
