@@ -69,7 +69,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="py-20 relative overflow-hidden">
+    <section id="projects" className="py-20 relative overflow-hidden">
       <CosmicParticles />
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
