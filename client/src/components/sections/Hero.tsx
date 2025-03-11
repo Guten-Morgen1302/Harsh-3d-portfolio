@@ -290,7 +290,7 @@ export default function Hero() {
               variants={fadeInUp}
             >
               <motion.a 
-                href="#portfolio" 
+                href="#projects" 
                 className="bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-8 rounded-full transition-all"
                 whileHover={{ 
                   y: -5, 

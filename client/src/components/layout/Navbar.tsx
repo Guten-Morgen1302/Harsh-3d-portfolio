@@ -95,9 +95,9 @@ export default function Navbar() {
                 />
               )}
             </a>
-            <a href="#portfolio" className={`text-neutral transition-colors relative ${activeSection === 'portfolio' ? 'text-accent' : ''}`}>
-              Portfolio
-              {activeSection === 'portfolio' && (
+            <a href="#projects" className={`text-neutral transition-colors relative ${activeSection === 'projects' ? 'text-accent' : ''}`}>
+              Projects
+              {activeSection === 'projects' && (
                 <motion.span
                   layoutId="navIndicator"
                   className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
@@ -190,12 +190,12 @@ export default function Navbar() {
                 )}
               </a>
               <a
-                href="#portfolio"
-                className={`text-neutral hover:text-accent py-2 transition-colors relative ${activeSection === 'portfolio' ? 'text-accent' : ''}`}
+                href="#projects"
+                className={`text-neutral hover:text-accent py-2 transition-colors relative ${activeSection === 'projects' ? 'text-accent' : ''}`}
                 onClick={closeMenu}
               >
-                Portfolio
-                {activeSection === 'portfolio' && (
+                Projects
+                {activeSection === 'projects' && (
                   <motion.span
                     layoutId="navIndicator"
                     className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full"
