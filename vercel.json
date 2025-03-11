@@ -1,19 +1,9 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "server/index.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "client/**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/client/$1"
+      "src": "client/index.html",
+      "use": "@vercel/static",
+      "outputDirectory": "dist/public"
     }
   ]
 }
