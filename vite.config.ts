@@ -16,7 +16,6 @@ export default defineConfig({
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
-          // Conditionally add Cartographer plugin in non-production environments
           await import("@replit/vite-plugin-cartographer").then((m) =>
             m.cartographer(),
           ),
@@ -33,9 +32,5 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
-  },
-  server: {
-    host: "0.0.0.0", // Allow server to be accessible externally (useful in Docker/VMs)
-    middlewareMode: process.env.NODE_ENV === "production" ? false : "html", // Disable Vite server in production
   },
 });
