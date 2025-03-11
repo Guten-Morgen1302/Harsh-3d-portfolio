@@ -33,5 +33,4 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
-  base: '/Harsh-3d-portfolio/', // The exact path where your app will be hosted
 });
