@@ -51,7 +51,7 @@ function Preloader() {
               ease: "easeInOut"
             }}
           >
-            COSMIC PORTFOLIO
+            HARSH'S PORTFOLIO
           </motion.div>
           <motion.div 
             className="text-xl text-cyan-300 tracking-wide font-light"
