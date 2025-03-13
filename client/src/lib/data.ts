@@ -132,7 +132,7 @@ export const skillCategories = [
     name: "Frontend",
     icon: "fas fa-laptop-code",
     items: [
-      { name: "HTML", proficiency: 95 },
+      { name: "HTML", proficiency: 71 },
       { name: "CSS", proficiency: 86 },
       { name: "JavaScript", proficiency: 54 },
       { name: "React", proficiency: 81 },
@@ -155,8 +155,8 @@ export const skillCategories = [
     items: [
       { name: "Git", proficiency: 95 },
       { name: "GitHub", proficiency: 95 },
-      { name: "Figma", proficiency: 95 },
-      { name: "UI/UX Design", proficiency: 95 }
+      { name: "Figma", proficiency: 72 },
+      { name: "UI/UX Design", proficiency: 81 }
     ]
   }
 ];
