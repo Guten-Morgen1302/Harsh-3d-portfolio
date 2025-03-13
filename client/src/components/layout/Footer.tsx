@@ -59,7 +59,7 @@ export default function Footer() {
         {/* Additional Footer Info */}
         <div className="border-t border-neutral/10 mt-8 pt-8 text-center text-neutral/60 text-sm">
           <p>
-            Designed and developed by Harsh Patil with <span className="text-red-500">♥</span>, React and Three.js
+            Designed and developed by Harsh Patil
           </p>
         </div>
       </div>
