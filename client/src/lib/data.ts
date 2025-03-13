@@ -133,20 +133,20 @@ export const skillCategories = [
     icon: "fas fa-laptop-code",
     items: [
       { name: "HTML", proficiency: 95 },
-      { name: "CSS", proficiency: 95 },
-      { name: "JavaScript", proficiency: 95 },
-      { name: "React", proficiency: 95 },
-      { name: "Tailwind CSS", proficiency: 95 }
+      { name: "CSS", proficiency: 86 },
+      { name: "JavaScript", proficiency: 54 },
+      { name: "React", proficiency: 81 },
+      { name: "Tailwind CSS", proficiency: 74 }
     ]
   },
   {
     name: "Backend",
     icon: "fas fa-server",
     items: [
-      { name: "Node.js", proficiency: 95 },
-      { name: "Express", proficiency: 95 },
-      { name: "MongoDB", proficiency: 95 },
-      { name: "TypeScript", proficiency: 95 }
+      { name: "Node.js", proficiency: 81 },
+      { name: "Express", proficiency: 42 },
+      { name: "MongoDB", proficiency: 51 },
+      { name: "TypeScript", proficiency: 69 }
     ]
   },
   {
